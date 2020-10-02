@@ -1,6 +1,21 @@
 (function(){
     "use strict";
+
+
     document.addEventListener('DOMContentLoaded', function(){
+
+        var map = L.map('mapa').setView([19.247626, -99.605141], 16);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([19.247626, -99.605141]).addTo(map)
+            .bindPopup('GDLWebCamp boletos ya disponibles.')
+            .openPopup()
+            .bindTooltip('Un tootltip')
+            .openTooltip();
+
         //Campos datos usuario
         var nombre = document.getElementById('nombre');
         var apellido = document.getElementById('apellido');
