@@ -3,18 +3,21 @@
 
 
     document.addEventListener('DOMContentLoaded', function(){
+        if(document.getElementById('mapa'))
+        {
+            var map = L.map('mapa').setView([19.247626, -99.605141], 16);
 
-        var map = L.map('mapa').setView([19.247626, -99.605141], 16);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+            }).addTo(map);
 
-        L.marker([19.247626, -99.605141]).addTo(map)
+            L.marker([19.247626, -99.605141]).addTo(map)
             .bindPopup('GDLWebCamp boletos ya disponibles.')
-            .openPopup()
-            .bindTooltip('Un tootltip')
-            .openTooltip();
+            .openPopup();
+            // .bindTooltip('Un tootltip')
+            // .openTooltip();
+        }
 
         //Campos datos usuario
         var nombre = document.getElementById('nombre');
