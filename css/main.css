@@ -372,8 +372,11 @@ div.programa-evento{
 }
 nav.menu-programa{
   width: 100%;
-  border-bottom: 1px solid #fe4918;
-  padding: 10px;
+  
+  
+}
+div.ocultar{
+  display: none;
 }
 @media (min-width: 768px){
   nav.menu-programa{
@@ -388,6 +391,23 @@ nav.menu-programa a{
   font-family: 'Oswald', sans-serif;
   margin-bottom: 10px ;
   font-size: 1.2em;
+  position: relative;
+}
+nav.menu-programa a.activo::after{
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20px;
+  width: 30px;
+  background-image: url(../img/talleres-flecha.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  bottom: -20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fe4918;
 }
 @media (min-width: 768px){
   nav.menu-programa a{
@@ -904,6 +924,7 @@ input[disabled] .button{
   @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
   }
+  
   
   @media print,
     (-webkit-min-device-pixel-ratio: 1.25),
