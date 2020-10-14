@@ -157,4 +157,10 @@ $(function(){
 
         return false; //Para que no haga saltos
     });
+
+    //Animaciones para los números
+    $('.resumen-evento li:nth-child(1) p').animateNumber({number:6},1200);
+    $('.resumen-evento li:nth-child(2) p').animateNumber({number:15},1200);
+    $('.resumen-evento li:nth-child(3) p').animateNumber({number:3},1200);
+    $('.resumen-evento li:nth-child(4) p').animateNumber({number:69},1200);
 });
